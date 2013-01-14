@@ -5,5 +5,5 @@ read num
 URLS="$num.urls"
 curl http://www.ex.ua/filelist/$num.urls > $URLS
 for u in `cat ~/1.txt`; do
-	wget --content-disposition $u
+	wget -nc --content-disposition -c $u
 done
